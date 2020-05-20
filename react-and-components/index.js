@@ -11,7 +11,7 @@ import { hot } from 'react-hot-loader/root';
 import App from './App';
 
 // Import base styles so we don't mind about the rest
-import '../config/base.css';
+import '../__config/base.css';
 
 // This is necessary to the app reload without refreshing the whole page
 const HotApp = hot(() => <App></App>);

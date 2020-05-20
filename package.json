@@ -6,11 +6,25 @@
     "author": "Nicolás M. Pardo <nicolasm@nikodermus.media>",
     "license": "MIT",
     "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-hot-loader": "^4.12.21",
+        "react-redux": "^7.2.0",
+        "react-spring": "^8.0.27",
+        "redux": "^4.0.5",
+        "styled-components": "^5.1.0"
+    },
+    "scripts": {
+        "cli": "./__config/cli",
+        "dev": "node -r esm ./node_modules/.bin/webpack-dev-server --config ./__config/webpack-base.js",
+        "start": "run-s cli dev"
+    },
+    "devDependencies": {
         "@babel/core": "^7.9.6",
         "@babel/preset-react": "^7.9.4",
         "@babel/register": "^7.9.0",
         "@hot-loader/react-dom": "^16.13.0",
-        "arg": "^4.1.3",
         "babel-eslint": "^10.1.0",
         "babel-loader": "^8.1.0",
         "chalk": "^4.0.0",
@@ -29,27 +43,15 @@
         "eslint-plugin-react-hooks": "^4.0.2",
         "esm": "^3.2.25",
         "file-loader": "^6.0.0",
+        "globby": "^11.0.0",
         "html-webpack-plugin": "^4.3.0",
         "inquirer": "^7.1.0",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.0.5",
-        "prop-types": "^15.7.2",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-hot-loader": "^4.12.21",
-        "react-spring": "^8.0.27",
         "style-loader": "^1.2.1",
-        "styled-components": "^5.1.0",
-        "stylus": "^0.54.7",
-        "stylus-loader": "^3.0.2",
         "url-loader": "^4.1.0",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11",
         "webpack-dev-server": "^3.11.0"
-    },
-    "scripts": {
-        "cli": "./config/cli",
-        "dev": "node -r esm ./node_modules/.bin/webpack-dev-server --config ./config/webpack-base.js",
-        "start": "run-s cli dev"
     }
 }

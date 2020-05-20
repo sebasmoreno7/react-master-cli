@@ -9,6 +9,7 @@ import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import dotenv from 'dotenv';
+import fs from 'fs';
 
 dotenv.config();
 
@@ -17,14 +18,6 @@ const { NAME, PROJECT, MODULES } = process.env;
 if (!PROJECT) {
     throw new Error("🌵 No project selected. Stopping process...");
 }
-
-import fs from 'fs';
-
-console.log(
-    'webpaaack',
-    process.env
-);
-
 
 fs.writeFileSync(
     './.env',
