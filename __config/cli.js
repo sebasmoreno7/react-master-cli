@@ -13,14 +13,21 @@ dotenv.config();
 const { NAME } = process.env;
 
 const createMetadata = async () => {
-    const folders = (await globby('**', {
-        gitignore: true,
-        onlyDirectories: true,
-        deep: 1,
-    })).filter(folder => !filteredFolders.includes(folder) && !folder.startsWith("__"));
+    const folders = (
+        await globby('**', {
+            gitignore: true,
+            onlyDirectories: true,
+            deep: 1,
+        })
+    ).filter(
+        (folder) =>
+            !filteredFolders.includes(folder) && !folder.startsWith('__')
+    );
 
-    const metadata = folders.map(folder => {
-        const folderMeta = JSON.parse(fs.readFileSync(path.join(folder, 'metadata.json')));
+    const metadata = folders.map((folder) => {
+        const folderMeta = JSON.parse(
+            fs.readFileSync(path.join(folder, 'metadata.json'))
+        );
         return {
             ...folderMeta,
             folder,
@@ -30,64 +37,67 @@ const createMetadata = async () => {
     return metadata;
 };
 
-const createOptions = (metadata) => metadata.map(({ name, folder, modules, description }, index) => {
-    const number = `${String(index + 1).padStart(2, "0")}`;
+const createOptions = (metadata) =>
+    metadata.map(({ name, folder, modules, description }, index) => {
+        const number = `${String(index + 1).padStart(2, '0')}`;
 
-    return {
-        name: `${number}. ${name}`,
-        value: { folder, modules, number, name, description }
-    };
-});
+        return {
+            name: `${number}. ${name}`,
+            value: { folder, modules, number, name, description },
+        };
+    });
 
 export const cli = async () => {
-    const hasName = NAME && NAME !== "undefined";
+    const hasName = NAME && NAME !== 'undefined';
 
     if (hasName) {
         const emoji = `${emojis[randomInRange(emojis.length - 1)]}`;
-        const name = capitalize(NAME);
+        const parsedName = capitalize(NAME);
         const phrase = messages[randomInRange(messages.length - 1)];
-        const hi = center(`Hey ${name}`, phrase.length - emoji.length * 2);
+        const hi = center(
+            `Hey ${parsedName}`,
+            phrase.length - emoji.length * 2
+        );
 
-
-        console.log(chalk.bold.blue(`
+        console.log(
+            chalk.bold.blue(`
 ${emoji}${hi}${emoji}
 ${phrase}!
 `)
         );
     }
 
-    const nameQuestion = !hasName ? [
+    const nameQuestion = !hasName
+        ? [
+              {
+                  type: 'input',
+                  name: 'name',
+                  message: "What's your name?",
+              },
+          ]
+        : [];
+
+    const answers = await inquirer.prompt([
+        ...nameQuestion,
         {
-            type: 'input',
-            name: 'name',
-            message: "What's your name?"
-        }
-    ] : [];
-
-    const answers = await inquirer.prompt(
-        [
-            ...nameQuestion,
-            {
-                type: 'list',
-                name: "package",
-                message: "Which project do you want to run?",
-                choices: [
-                    ...createOptions(await createMetadata()),
-                    new inquirer.Separator('>>>>'),
-
-                ]
-            },
-        ]
-    );
+            type: 'list',
+            name: 'package',
+            message: 'Which project do you want to run?',
+            choices: [
+                ...createOptions(await createMetadata()),
+                new inquirer.Separator('>>>>'),
+            ],
+        },
+    ]);
 
     const { folder, modules, number, name, description } = answers.package;
 
     fs.writeFileSync(
         './.env',
         `
-NAME = ${ answers.name || NAME || ""}
-PROJECT = ${ folder}
-MODULES = ${ Number(modules)}
+NAME = ${answers.name || NAME || ''}
+PROJECT = ${folder}
+MODULES = ${Number(modules)}
 `
     );
 
@@ -95,6 +105,6 @@ MODULES = ${ Number(modules)}
         `
 Starting project ${number}: ${chalk.green(name)}.
 Let's ${chalk.green(description)}!
-`);
-
+`
+    );
 };

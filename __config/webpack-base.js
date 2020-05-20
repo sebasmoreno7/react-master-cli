@@ -16,36 +16,38 @@ dotenv.config();
 const { NAME, PROJECT, MODULES } = process.env;
 
 if (!PROJECT) {
-    throw new Error("🌵 No project selected. Stopping process...");
+    throw new Error('🌵 No project selected. Stopping process...');
 }
 
 fs.writeFileSync(
     './.env',
     `
-    NAME=${NAME || ""}
+    NAME=${NAME || ''}
     `
 );
 
-const cssModuleRules = Number(MODULES) ? [{
-    test: /\.css$/,
-    loader: 'style-loader',
-},
-{
-    test: /\.css$/,
-    loader: 'css-loader',
-    options: {
-        modules: {
-            localIdentName:
-                '[path][name]__[local]--[hash:base64:5]',
-        },
-    },
-}] : [{
-    test: /\.css$/,
-    use: [
-        'style-loader',
-        'css-loader',
-    ],
-},];
+const cssModuleRules = Number(MODULES)
+    ? [
+          {
+              test: /\.css$/,
+              loader: 'style-loader',
+          },
+          {
+              test: /\.css$/,
+              loader: 'css-loader',
+              options: {
+                  modules: {
+                      localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  },
+              },
+          },
+      ]
+    : [
+          {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader'],
+          },
+      ];
 
 module.exports = {
     mode: 'development',

@@ -1,4 +1,5 @@
 #! /usr/bin/env node
 
-require = require('esm')(module /*, options*/);
+// eslint-disable-next-line no-global-assign
+require = require('esm')(module /* , options */);
 require('./cli.js').cli(process.argv);
