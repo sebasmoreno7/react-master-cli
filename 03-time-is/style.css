@@ -1,0 +1,26 @@
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: lavender;
+    color: dimgray;
+}
+
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 10rem;
+}
+
+.container {
+    background: white;
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 7px 3px rgba(0, 0, 0, 0.2);
+}

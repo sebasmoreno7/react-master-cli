@@ -11,6 +11,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import dotenv from 'dotenv';
 import fs from 'fs';
 
+import { randomInRange } from './utils';
+
 dotenv.config();
 
 const { NAME, PROJECT, MODULES } = process.env;
@@ -22,7 +24,7 @@ if (!PROJECT) {
 fs.writeFileSync(
     './.env',
     `
-    NAME=${NAME || ''}
+NAME=${NAME || ''}
     `
 );
 
@@ -49,7 +51,7 @@ const cssModuleRules = Number(MODULES)
           },
       ];
 
-module.exports = {
+const config = {
     mode: 'development',
     entry: [
         'react-hot-loader/patch',
@@ -67,7 +69,7 @@ module.exports = {
         inline: true,
         open: true,
         contentBase: path.join(__dirname, `../${PROJECT}/public/`),
-        port: 1306,
+        port: randomInRange(3000, 9000),
     },
     module: {
         rules: [
@@ -78,8 +80,11 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'eslint-loader',
                 options: {
-                    fix: true,
+                    cache: true,
+                    configFile: '.eslintrc',
                     failOn: false,
+                    fix: true,
+                    quiet: true,
                 },
             },
             {
@@ -132,3 +137,5 @@ module.exports = {
         ignored: ['node_modules'],
     },
 };
+
+export default config;

@@ -1,5 +1,5 @@
 import React from 'react';
 
-const App = () => <div>Projecto 2!</div>;
+const App = () => <div>I'm ready to React</div>;
 
 export default App;
