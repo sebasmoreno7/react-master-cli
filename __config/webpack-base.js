@@ -95,7 +95,10 @@ const config = {
                 options: {
                     cacheDirectory: true,
                     presets: ['@babel/preset-react'],
-                    plugins: ['react-hot-loader/babel'],
+                    plugins: [
+                        'react-hot-loader/babel',
+                        '@babel/plugin-proposal-class-properties',
+                    ],
                 },
             },
             ...cssModuleRules,

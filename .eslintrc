@@ -2,6 +2,9 @@
     "root": true,
     "extends": ["wesbos"],
     "rules": {
+        "react/destructuring-assignment": "warn",
+        "react/prop-types": "warn",
+        "react/state-in-constructor": ["warn", "never"],
         "prettier/prettier": [
             "error",
             {

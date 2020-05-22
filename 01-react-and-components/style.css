@@ -1,0 +1,84 @@
+body {
+    background-size: cover;
+    background: url('/bg.png');
+    text-align: center;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.logo img {
+    width: 10rem;
+}
+
+.logo figcaption {
+    background: white;
+    font-size: 3rem;
+    font-style: oblique;
+    font-weight: bold;
+    margin-left: 1rem;
+    padding: 1rem;
+    transform: skew(-15deg) rotate(-3deg);
+}
+
+.students {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.student {
+    align-items: center;
+    background: #151515;
+    border-radius: 0.5rem;
+    box-shadow: 18px 18px 0 0 white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 15%;
+    padding: 2rem;
+    text-align: center;
+    transform: skew(-15deg) rotate(-3deg);
+}
+
+.student:hover {
+    box-shadow: 8px 8px 0 0 white;
+}
+
+.student h2 {
+    font-size: 1.2rem;
+    font-style: oblique;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+.student h2 .name {
+    color: #e30451;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 0.25rem;
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.student small {
+    transform: skew(15deg) rotate(3deg);
+    font-size: 1.5rem;
+}
+
+.student button {
+    background: #5edddf;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    transform: skew(15deg) rotate(3deg) scale(0.8);
+}
+
+.student button:hover {
+    background: #48aaac;
+}
