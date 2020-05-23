@@ -1,6 +1,14 @@
 import React from 'react';
 import './style.css';
 
-const App = () => <div>I'm ready to React</div>;
+import Arriba from './Arriba';
+import Abajo from './Abajo';
+
+const App = () => (
+    <div>
+        <Arriba />
+        <Abajo />
+    </div>
+);
 
 export default App;
