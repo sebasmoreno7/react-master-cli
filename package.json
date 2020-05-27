@@ -20,7 +20,7 @@
     },
     "scripts": {
         "cli": "./__config/cli",
-        "dev": "node -r esm ./node_modules/.bin/webpack-dev-server --config ./__config/webpack-base.js",
+        "dev": "node -r esm node_modules/webpack-dev-server/bin/webpack-dev-server.js --config ./__config/webpack-base.js",
         "start": "run-s cli dev"
     },
     "devDependencies": {
