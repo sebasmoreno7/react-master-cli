@@ -19,7 +19,7 @@
         "styled-components": "^5.1.0"
     },
     "scripts": {
-        "cli": "./__config/cli",
+        "cli": "node ./__config/cli",
         "dev": "node -r esm webpack-dev-server --config __config/webpack-base.js",
         "start": "run-s cli dev"
     },
