@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 const App = () => {
-    const name = 'YOUR NAME';
+    const date = new Date().getFullYear();
 
     return (
         <>
@@ -22,7 +22,7 @@ const App = () => {
                     </figcaption>
                 </figure>
             </main>
-            <footer>deBakatas memes 2019 ©</footer>
+            <footer>deBakatas memes {date} ©</footer>
         </>
     );
 };
