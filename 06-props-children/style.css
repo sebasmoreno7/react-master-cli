@@ -1,0 +1,30 @@
+#debakatas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background: #151515;
+}
+
+figure {
+    display: flex;
+    position: relative;
+    margin-top: -10%;
+}
+
+figcaption {
+    color: var(--dk-green);
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%) var(--dk-effect);
+}
+
+img {
+    width: 20vw;
+    min-width: 200px;
+}
