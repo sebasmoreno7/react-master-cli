@@ -1,0 +1,50 @@
+#debakatas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 50px solid var(--dk-pink);
+}
+
+figure {
+    position: relative;
+    width: 50vw;
+    min-width: 400px;
+}
+
+figure::after {
+    content: '';
+    display: block;
+    padding-bottom: 80%;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+img[src=''] {
+    display: none;
+}
+
+img.show {
+    transform: scale(0.8);
+    transform-origin: top left;
+}
+
+main button {
+    background: white;
+    border-radius: 0.75rem;
+    border: 2px solid var(--dk-pink);
+    color: var(--dk-pink);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+main button:hover {
+    border-color: white;
+    background: var(--dk-pink);
+    color: white;
+}
