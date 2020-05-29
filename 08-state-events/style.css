@@ -1,0 +1,85 @@
+#debakatas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/maracana.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+dl {
+    background: #1c1b2b;
+    position: relative;
+    color: white;
+    padding-inline: 4rem;
+    padding-block: 2rem;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+img {
+    position: absolute;
+    width: 7rem;
+    left: 50%;
+    top: 0.5rem;
+    animation: rotate 10s linear infinite;
+    display: block;
+}
+
+dl {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+}
+
+.corinthians dt {
+    background: #e51d2f;
+}
+
+.santos dt {
+    background: #053f85;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    transform: var(--dk-effect);
+    padding: 1rem 2rem;
+    color: white;
+}
+
+dd {
+    color: white;
+    font-size: 10rem;
+    font-variant-numeric: tabular-nums;
+}
+
+dl button {
+    font-size: 1.5rem;
+    color: #3c3a5c;
+    border: 2px solid currentColor;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+dl button:nth-of-type(2) {
+    margin-left: -2px;
+}
+
+dl button:hover {
+    color: white;
+    z-index: 1;
+}
