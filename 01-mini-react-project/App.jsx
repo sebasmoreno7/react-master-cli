@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Student from './Student';
-import Teacher from './Teacher';
 
 import './style.css';
 import '../__config/base.css';
@@ -14,7 +13,6 @@ const App = () => (
             <img src="/react.png" alt="" />
             <figcaption>Que lindo React </figcaption>
         </figure>
-        <Teacher />
         <ul className="students">
             {students.map((student) => (
                 <Student key={student} name={student} />

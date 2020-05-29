@@ -10,6 +10,7 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import dotenv from 'dotenv';
 import fs from 'fs';
+import chalk from 'chalk';
 
 import { randomInRange } from './utils';
 
@@ -18,7 +19,11 @@ dotenv.config();
 const { NAME, PROJECT, MODULES } = process.env;
 
 if (!PROJECT) {
-    throw new Error('🌵 No project selected. Stopping process...');
+    console.log(`
+${chalk.red('🌵 No project selected. Stopping process...')}
+${chalk.bgCyan(`Did you run "npm start" before?`)}
+`);
+    process.exit(1);
 }
 
 fs.writeFileSync(
