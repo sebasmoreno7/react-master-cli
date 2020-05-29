@@ -1,36 +1,36 @@
 # React Rules
 
--   `className` attribute instead of `class`
+-   Usa el atributo`className` en vez de `class`
 
     ```
     ❌ <h1 class="title">Hello</h1>
     ✅ <h1 className="title">Hello</h1>
     ```
 
--   `htmlFor` attribute instead of `for`
+-   Usa el atributo `htmlFor` en vez de `for`
 
     ```
     ❌ <label for="email">E-mail</label>
     ✅ <label htmlFor="email">E-mail</label>
     ```
 
--   [Tags must be closed and all tags can be self-closing][closing tags]
+-   [Las etiquetas deben ser cerradas, y todas se pueden cerrar a sí mismas][closing tags]
 
     ```
     ❌ <input type="text">
     ✅ <input type="text" />
 
-    ✅ <div /> // Self closing tag
+    ✅ <div /> // Etiqueta cerrandose a sí misma
     ```
 
--   Image and static files paths are relative to where the app is served, not to where the component is used.
+-   Las rutas de imagenes y archivos estaticos son relativos a donde se sirve la aplicación, no a donde se use en el componente.
 
     ```
     ❌ <img src="../../public/images/chewy.png />
     ✅ <img src="/images/chewy.png />
     ```
 
--   A Component _must_ return a single node, see [React Fragments][react fragments]
+-   Un componente _debe_ solo retornar un nodo, para eso revisa [React Fragments][react fragments]
 
     ```jsx
     <!-- ❌ -->
