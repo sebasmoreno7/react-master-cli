@@ -57,8 +57,9 @@ figure {
     align-items: flex-start;
 }
 
-img {
+.cover {
     max-width: 100px;
+    width: 100%;
 }
 
 h2 {

@@ -7,7 +7,7 @@ import dislike from '../img/dislike.svg';
 const Movie = () => (
     <li>
         <figure>
-            <img src="/primer.jpg" alt="" />
+            <img src="/primer.jpg" alt="" className="cover" />
             <div className="content">
                 <div className="title">
                     <h2>Primer (2005)</h2>
