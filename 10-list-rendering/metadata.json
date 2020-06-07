@@ -1,4 +1,4 @@
 {
-    "name": "Activity - List Rendering",
-    "description": "create a list with state management"
+    "name": "List Rendering Shared",
+    "description": "create a list with shared state management"
 }
