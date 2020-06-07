@@ -18,7 +18,8 @@
                 "trailingComma": "es5",
                 "useTabs": false
             }
-        ]
+        ],
+        "react/jsx-props-no-spreading": "off"
     },
     "overrides": [
         {
