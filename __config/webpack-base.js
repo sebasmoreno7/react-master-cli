@@ -78,20 +78,8 @@ const config = {
     },
     module: {
         rules: [
-            {
-                // Check for eslint errors
-                enforce: 'pre',
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: 'eslint-loader',
-                options: {
-                    cache: true,
-                    configFile: '.eslintrc',
-                    failOn: false,
-                    fix: true,
-                    quiet: true,
-                },
-            },
+            
+            
             {
                 // Compile main index
                 test: /\.jsx?$/,
