@@ -1,5 +1,7 @@
 # State Basics
 
+> [Code Sandbox](https://codesandbox.io/s/06-state-basics-orx3z)
+
 -   ¿Por qué usamos `bind` en los metodos? [EN](https://www.freecodecamp.org/news/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb/) | [ES](https://medium.com/@ger86/por-qu%C3%A9-es-necesario-usar-bind-en-los-event-listener-de-los-components-d2f3a5944f4c)
 
 ## Actividad

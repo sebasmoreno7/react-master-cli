@@ -14,7 +14,12 @@ import App from './App';
 import '../__config/base.css';
 
 // This is necessary to the app reload without refreshing the whole page
-const HotApp = hot(() => <App />);
+const HotApp = hot(() => (
+    // This will enforce better practices, see: https://reactjs.org/docs/strict-mode.html
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+));
 
 // Get our App.jsx and mount it all into the #debakatas div
 ReactDOM.render(<HotApp />, document.getElementById('debakatas'));

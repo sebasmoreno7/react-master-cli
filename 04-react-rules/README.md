@@ -1,5 +1,7 @@
 # React Rules
 
+> [Code Sandbox](https://codesandbox.io/s/04-react-rules-0s0x7)
+
 -   Usa el atributo`className` en vez de `class`
 
     ```

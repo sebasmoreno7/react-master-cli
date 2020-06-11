@@ -1,5 +1,7 @@
 # Una familia con props
 
+> [Code Sandbox](https://codesandbox.io/s/07-props-children-e3ssv)
+
 ¿Conoces la serie [Dark](https://www.netflix.com/title/80100172)? Sin importar la respuesta, te tenemos una prueba.
 
 Vamos a recrear un pequeño arbol familiar con componentes de React, y usaremos los props para qué se hablen entre ellos. Así se ve la linea familiar
