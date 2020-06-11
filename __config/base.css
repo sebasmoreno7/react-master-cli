@@ -82,3 +82,9 @@ button {
     background: transparent;
     cursor: pointer;
 }
+
+img[src=''],
+img[src='undefined'],
+img:not([src]) {
+    display: none;
+}

@@ -48,3 +48,8 @@ main button:hover {
     background: var(--dk-pink);
     color: white;
 }
+
+.tv-button {
+    border: none;
+    width: 100%;
+}

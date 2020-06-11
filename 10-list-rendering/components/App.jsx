@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Movie from './Movie';
-import movies from '../data/movies';
 
 const App = () => (
     <main>

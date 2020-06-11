@@ -7,10 +7,14 @@ import dislike from '../img/dislike.svg';
 const Movie = () => (
     <li>
         <figure>
-            <img src="/primer.jpg" alt="" className="cover" />
+            <img
+                src="/primer.jpg"
+                alt="Cover of Titulo - 1999"
+                className="cover"
+            />
             <div className="content">
                 <div className="title">
-                    <h2>Primer (2005)</h2>
+                    <h2>Titulo (1999)</h2>
                     <button type="button">
                         <img src={up} alt="Vote up" />
                     </button>
@@ -20,7 +24,7 @@ const Movie = () => (
                     <img src={like} alt="Like status" />
                 </div>
                 <small>
-                    IMDB <span>6.9/10</span>
+                    IMDB <span>0.0/10</span>
                 </small>
                 <figcaption>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
