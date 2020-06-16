@@ -78,9 +78,11 @@ table {
     border-spacing: 0;
 }
 
-button {
+button,
+a {
     background: transparent;
     cursor: pointer;
+    text-decoration: none;
 }
 
 img[src=''],
