@@ -1,6 +1,6 @@
 # React Router
 
-> [Code Sandbox](REPLACE_ME)
+> [Code Sandbox](https://codesandbox.io/s/12-router-basics-8l8tc)
 
 El Router nos permite tener varias páginas, en una sola aplicación en el explorador.
 
