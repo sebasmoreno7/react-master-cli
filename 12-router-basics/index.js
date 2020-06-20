@@ -8,10 +8,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader/root';
 
-import App from './App';
+import App from './components/App';
 
 // Import base styles so we don't mind about the rest
 import '../__config/base.css';
+import './style.css';
 
 // This is necessary to the app reload without refreshing the whole page
 const HotApp = hot(() => (

@@ -1,5 +1,7 @@
 # State and Events
 
+> [Code Sandbox](https://codesandbox.io/s/08-state-events-p0qt2)
+
 ## `this.setState(function)`
 
 Cada vez vamos conociendo un poco más de como funciona React, ahora sabemos que en la función `this.setState`, no solo podemos enviar un objeto, sino que cuando necesitemos tener acceso al estado para hacer cambios a partir de ahí, podremos enviar una función que debe retornar un objeto con los cambios que querramos tener.

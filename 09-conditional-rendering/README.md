@@ -1,5 +1,7 @@
 # Activity - Conditional Rendering
 
+> [Code Sandbox](https://codesandbox.io/s/09-conditional-rendering-66fhw)
+
 Estás encargado de cambiar el día y la noche, así que debes hacer qué tenga sentido usando el switch que te preveemos, en la forma de un `<input type="checkbox" />`
 
 Aquí está tu reto:

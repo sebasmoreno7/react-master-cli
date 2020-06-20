@@ -1,5 +1,7 @@
 # Activity - Movie List
 
+> [Code Sandbox](https://codesandbox.io/s/10-list-rendering-czyfr)
+
 Vamos a usar todos los conocimientos que tenemos haciendo una lista de películas (Viajes en el tiempo 🚗⌛).
 
 Esto es lo que debes hacer:

@@ -3,7 +3,7 @@ import React from 'react';
 const ComplexData = (props) => (
     <ul>
         {props.list.map((listElement) => (
-            <li>{listElement}</li>
+            <li key={listElement}>{listElement}</li>
         ))}
     </ul>
 );

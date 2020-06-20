@@ -43,7 +43,9 @@ const Movie = ({ name, score, description, year, cover, status }) => (
             </div>
         </figure>
         <button type="button" className="delete">
-            ❌
+            <span role="img" aria-label="delete">
+                ❌
+            </span>
         </button>
     </li>
 );

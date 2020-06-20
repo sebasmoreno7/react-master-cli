@@ -1,5 +1,7 @@
 # Props
 
+> [Code Sandbox](https://codesandbox.io/s/05-props-27cee)
+
 Los `props` (o propiedades), son la información que pasamos de un componente a otro, esto se debe a que un componente es una `función`, todos estos se reunen en un objeto que es pasado como `parametro` a nuestra función, en donde las llaves serian los nombres que usamos en el `JSX` (HTML).
 
 ## Enviando props

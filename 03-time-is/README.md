@@ -1,4 +1,6 @@
-# What time is it? (Summer time)
+# What time is it?
+
+> [Code Sandbox](https://codesandbox.io/s/03-time-is-phzxx)
 
 Ahora entendemos que dentro del JSX tenemos contenido estático y dinamico.
 
