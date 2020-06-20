@@ -3,17 +3,20 @@ import up from '../img/up.svg';
 import down from '../img/down.svg';
 import like from '../img/like.svg';
 import dislike from '../img/dislike.svg';
+import movies from '../data/movies.js';
 
-const Movie = () => (
-    <li>
+const Movie = (props) => (
+    
+   <li>
+        {props.list.map((props) => ( 
         <figure>
             <img
-                src="/primer.jpg"
+                src={props.cover}
                 alt="Cover of Titulo - 1999"
                 className="cover"
             />
             <div className="content">
-                <div className="title">
+                <div className={props.name}>
                     <h2>Titulo (1999)</h2>
                     <button type="button">
                         <img src={up} alt="Vote up" />
@@ -27,14 +30,13 @@ const Movie = () => (
                     IMDB <span>0.0/10</span>
                 </small>
                 <figcaption>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Totam nisi expedita porro perspiciatis impedit sunt debitis
-                    ratione iste quo voluptate assumenda repudiandae aperiam
-                    quisquam, accusantium natus ipsam quidem dolorum quod.
+                    {props.description}
                 </figcaption>
             </div>
         </figure>
+        ))}
     </li>
+    
 );
 
 export default Movie;
