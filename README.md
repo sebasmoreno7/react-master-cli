@@ -69,3 +69,17 @@ Te estaremos indicando que proyecto vamos a correr o en cual debes realizar tus 
 | `style.css`         |         | Los estilos para tu proyecto, es CSS vainilla (sin ningún pre-procesador), si necesitas usar [CSS Modules](https://github.com/css-modules/css-modules) agrega la opcion: `"modules": true` al `metadata.json` de ese proyecto. |
 
 Si deseas crear tu propio proyecto, puedes copiar la carpeta `__template`, cambiarle el nombre (el nombre no debe contener `__`), modifica el nombre y descripción en `metadata.json`, vuelve a iniciar la herramienta con `npm start` y tu proyecto estará disponible en las opciones (se organiza alfabeticamente).
+
+## Actualización
+
+Aveces necesitaremos actualizar el repositiorio (solo funciona si es un clon de git con todos los pasos de [preparación](##preparación) ), para ese puedes correr los siguientes scripts:
+
+```sh
+git add --all
+git commit "Actualización"
+git push
+git pull source master
+rm -rf node_modules
+rm package-lock.json yarn.lock
+npm install
+```
