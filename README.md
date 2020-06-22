@@ -80,6 +80,6 @@ git commit -m "Actualización"
 git push
 git pull source master
 rm -rf node_modules
-rm package-lock.json yarn.lock
+rm package-lock.json; rm yarn.lock
 npm install
 ```
