@@ -76,7 +76,7 @@ Aveces necesitaremos actualizar el repositiorio (solo funciona si es un clon de 
 
 ```sh
 git add --all
-git commit "Actualización"
+git commit -m "Actualización"
 git push
 git pull source master
 rm -rf node_modules
