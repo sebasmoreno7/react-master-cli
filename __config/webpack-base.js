@@ -79,15 +79,32 @@ const config = {
     },
     module: {
         rules: [
+<<<<<<< HEAD
             
             
+=======
+            {
+                // Check for eslint errors
+                enforce: 'pre',
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                options: {
+                    cache: false,
+                    configFile: '.eslintrc',
+                    failOn: false,
+                    fix: true,
+                    quiet: true,
+                },
+            },
+>>>>>>> 7fb0b7890ad2b39fb2665e5a0159b1efbe1cd4bc
             {
                 // Compile main index
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 options: {
-                    cacheDirectory: true,
+                    cacheDirectory: false,
                     presets: ['@babel/preset-react'],
                     plugins: [
                         'react-hot-loader/babel',
