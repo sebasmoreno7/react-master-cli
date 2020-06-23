@@ -2,9 +2,12 @@
     "root": true,
     "extends": ["wesbos"],
     "rules": {
+        "jsx-a11y/accessible-emoji": "error",
         "react/destructuring-assignment": "warn",
+        "react/jsx-props-no-spreading": "off",
         "react/prop-types": "warn",
         "react/state-in-constructor": ["warn", "never"],
+        "react/no-unused-state": "warn",
         "prettier/prettier": [
             "error",
             {
@@ -18,8 +21,7 @@
                 "trailingComma": "es5",
                 "useTabs": false
             }
-        ],
-        "react/jsx-props-no-spreading": "off"
+        ]
     },
     "overrides": [
         {

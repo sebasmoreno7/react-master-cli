@@ -7,6 +7,7 @@
     --dk-green: #34fcd8;
     --dk-blue: #7dc1fe;
     --dk-effect: skew(-15deg) rotate(-3deg);
+    --font-serif: Georgia, 'Times New Roman', Times, serif;
 }
 
 *,
@@ -21,6 +22,7 @@
     padding: 0;
     transition: all 0.15s ease-in-out;
     color: var(--dk-black);
+    outline: none;
 }
 
 html,
@@ -79,10 +81,18 @@ table {
 }
 
 button,
-a {
+a,
+input,
+textarea {
     background: transparent;
     cursor: pointer;
     text-decoration: none;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 img[src=''],
