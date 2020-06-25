@@ -26,15 +26,15 @@ const Filters = () => (
             </fieldset>
             <fieldset>
                 <legend>
-                    <label htmlFor="age">Age: 25</label>
+                    <label htmlFor="minAge">Min Age: 1</label>
                 </legend>
                 <input
                     type="range"
-                    id="age"
+                    id="minAge"
                     min="1"
                     max="100"
                     step="1"
-                    defaultValue=""
+                    defaultValue="1"
                 />
             </fieldset>
             <fieldset>
