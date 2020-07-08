@@ -1,0 +1,143 @@
+html {
+    overflow: hidden;
+}
+
+#debakatas {
+    background: #c9e3ff;
+    --footer-size: 150px;
+    --island-transform: translate(-30%, 30%) rotate(30deg);
+    --z-sea: 10;
+    --z-island: 20;
+    --z-island-item: 30;
+    --z-boat-image: 40;
+    --z-boat: 50;
+}
+
+@keyframes waves {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 10000% 0%;
+    }
+}
+
+h1 {
+    position: fixed;
+    top: 3rem;
+    display: inline-block;
+    left: 50%;
+    text-align: center;
+    font-size: 5rem;
+    transform: var(--dk-effect) translateX(-60%);
+}
+
+footer {
+    position: fixed;
+    bottom: -30px;
+    height: var(--footer-size);
+    z-index: var(--z-sea);
+    width: 110vw;
+    left: -5%;
+    background-image: url('/sea.svg');
+    background-repeat: repeat-x;
+    animation: waves 700s ease-in-out infinite;
+}
+
+button:hover img {
+    filter: drop-shadow(0 0 10px white);
+}
+
+.island {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    max-width: 600px;
+    z-index: var(--z-island);
+}
+
+.island .land {
+    transform: var(--island-transform);
+}
+
+.island--right {
+    left: unset;
+    right: 0;
+}
+
+.island--right .land {
+    transform: translate(30%, 30%) rotate(180deg);
+}
+
+.knight {
+    width: 120px;
+}
+
+.goat {
+    width: 120px;
+}
+
+.dragon {
+    width: 350px;
+}
+
+.island-space {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 4rem;
+    max-width: 75%;
+}
+
+.island-item {
+    flex-shrink: 0;
+    position: relative;
+    z-index: var(--z-island-item);
+}
+
+.island-item:nth-of-type(3) {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.island--right .island-space {
+    left: unset;
+    right: 0;
+}
+.boat {
+    width: 50vw;
+    max-width: 600px;
+    position: fixed;
+    bottom: 90px;
+    left: 30%;
+    transition: transform 5s ease-in-out;
+    transform: translateX(0);
+    z-index: var(--z-boat);
+}
+
+.boat--right {
+    transition: transform 5s ease-in-out;
+    transform: translateX(50%);
+}
+
+.boat-image {
+    position: relative;
+    z-index: var(--z-boat-image);
+    width: 500px;
+}
+
+.boat-items {
+    position: absolute;
+    bottom: 80px;
+    z-index: var(--z-boat-item);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
