@@ -1,27 +1,28 @@
 {
-    "eslint.enable": true,
     "editor.formatOnSave": true,
-    "eslint.validate": ["javascript", "javascriptreact"],
-    "[javascript]": {
-        "editor.formatOnSave": false,
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": false,
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
+    "eslint.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.format.enable": true,
+
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll.eslint": true
     },
-    "prettier.disableLanguages": ["javascript", "javascriptreact"],
     "files.associations": {
         "*.js": "javascriptreact"
     },
     "emmet.syntaxProfiles": {
-        "javascript": "jsx",
-        "html": "jsx"
+        "html": "jsx",
+        "javascript": "jsx"
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     }
 }

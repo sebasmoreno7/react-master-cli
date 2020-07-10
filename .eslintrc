@@ -2,9 +2,21 @@
     "root": true,
     "extends": ["wesbos"],
     "rules": {
+        "import/no-cycle": [2, { "maxDepth": 1 }],
+        "jsx-a11y/accessible-emoji": "error",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+                "assert": "either",
+                "depth": 3
+            }
+        ],
         "react/destructuring-assignment": "warn",
+        "react/jsx-props-no-spreading": "off",
         "react/prop-types": "warn",
         "react/state-in-constructor": ["warn", "never"],
+        "react/no-unused-state": "warn",
         "prettier/prettier": [
             "error",
             {
@@ -18,8 +30,7 @@
                 "trailingComma": "es5",
                 "useTabs": false
             }
-        ],
-        "react/jsx-props-no-spreading": "off"
+        ]
     },
     "overrides": [
         {

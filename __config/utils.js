@@ -24,3 +24,25 @@ export const center = (string, length) => {
 
     return `${spacer}${string}${spacer}`;
 };
+
+const sendData = (data) =>
+    new Promise((res) => {
+        setTimeout(() => {
+            res(data);
+        }, randomInRange(500));
+    });
+
+const response = (data) =>
+    new Promise((res, rej) => {
+        if (Math.random() > 0.5) {
+            rej(new Error('Internet connection failed, try again'));
+        }
+
+        setTimeout(() => {
+            res({
+                json: () => sendData(data),
+            });
+        }, randomInRange(2000));
+    });
+
+export const pseudoFetch = (data) => response(data);
