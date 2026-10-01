@@ -79,10 +79,6 @@ const config = {
     },
     module: {
         rules: [
-<<<<<<< HEAD
-            
-            
-=======
             {
                 // Check for eslint errors
                 enforce: 'pre',
@@ -97,7 +93,6 @@ const config = {
                     quiet: true,
                 },
             },
->>>>>>> 7fb0b7890ad2b39fb2665e5a0159b1efbe1cd4bc
             {
                 // Compile main index
                 test: /\.jsx?$/,
