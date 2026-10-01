@@ -1,15 +1,15 @@
 import React from 'react';
 
 import Movie from './Movie';
-import { ProgressPlugin } from 'webpack';
+import movies from '../data/movies';
 
 const App = () => (
     <main>
         <h1>Time Travel Movies</h1>
         <ul>
-            {movies.map((peli)=>
-            <Movie />
-            ) }
+            {movies.map((movie) => (
+                <Movie key={movie.name} movie={movie} />
+            ))}
         </ul>
     </main>
 );
