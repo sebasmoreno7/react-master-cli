@@ -1,0 +1,19 @@
+/*
+    This file is the entry for the
+    Webpack system to bundle all
+    into a nice app :)
+*/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from './App';
+
+// Import base styles so we don't mind about the rest
+import '../__config/base.css';
+
+// This is necessary to the app reload without refreshing the whole page
+
+
+// Get our App.jsx and mount it all into the #debakatas div
+ReactDOM.render(<App />, document.getElementById('debakatas'));
