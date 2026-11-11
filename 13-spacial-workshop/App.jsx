@@ -5,7 +5,6 @@ import {
     Row,
     Col,
     Button,
-    Jumbotron,
     Badge,
     Form,
     FormControl,
@@ -21,11 +20,11 @@ const App = () => (
             <Navbar.Brand className="display-6 text-white" as="h2">
                 API Espacial
             </Navbar.Brand>
-            <Form inline>
+            <Form className="d-flex">
                 <FormControl
                     type="text"
                     placeholder="Search"
-                    className="mr-sm-2"
+                    className="me-sm-2"
                 />
                 <Button variant="outline-light">Search</Button>
             </Form>
@@ -33,9 +32,9 @@ const App = () => (
         <Container as="main">
             <Row className="justify-content-md-center my-4">
                 <Col>
-                    <Jumbotron>
+                    <div className="p-5 mb-4 bg-light rounded-3">
                         <h1>
-                            ¿Qué puedes crear <Badge variant="dark">hoy</Badge>?
+                            ¿Qué puedes crear <Badge bg="dark">hoy</Badge>?
                         </h1>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -45,7 +44,7 @@ const App = () => (
                             nesciunt?
                         </p>
                         <Button>Cualquier cosa!</Button>
-                    </Jumbotron>
+                    </div>
                 </Col>
             </Row>
         </Container>

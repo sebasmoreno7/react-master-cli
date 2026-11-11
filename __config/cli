@@ -1,5 +1,21 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
+import fs from 'node:fs';
+import path from 'node:path';
+import { createInterface } from 'node:readline/promises';
+import { getProjects, repositoryRoot } from './projects.mjs';
 
-// eslint-disable-next-line no-global-assign
-require = require('esm')(module /* , options */);
-require('./cli.js').cli(process.argv);
+const projects=getProjects();
+if(process.argv.includes('--list')) {
+  for(const project of projects) console.log(`${project.folder}: ${project.name}`);
+} else {
+  const prompt=createInterface({input:process.stdin,output:process.stdout});
+  try {
+    const name=await prompt.question("What's your name? ");
+    projects.forEach((project,index)=>console.log(`${index+1}. ${project.name}`));
+    const choice=Number(await prompt.question('Which lesson do you want to run? '));
+    if(!Number.isInteger(choice)||choice<1||choice>projects.length)throw new Error('Choose a valid lesson number.');
+    const selected=projects[choice-1];
+    fs.writeFileSync(path.join(repositoryRoot,'.env'),`NAME=${JSON.stringify(name)}\nPROJECT=${selected.folder}\nMODULES=0\n`,{mode:0o600});
+    console.log(`Starting ${selected.name}`);
+  } finally {prompt.close();}
+}
